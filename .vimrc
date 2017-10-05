@@ -1,7 +1,10 @@
 "# ##############
-"# Vundle configurations
-"# https://github.com/VundleVim/Vundle.vim
-"# ##############
+" Vundle configurations
+" https://github.com/VundleVim/Vundle.vim
+" 
+" In order for Vundle to work, we first need to install it via:
+" `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+" ##############
 
 "## option: nocompatible
 "## references: https://stackoverflow.com/questions/5845557/in-a-vimrc-is-set-nocompatible-completely-useless
@@ -28,13 +31,20 @@ call vundle#begin('$HOME/.vim/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+
 
 "# ##############
 "# Vundle Plugins
 "# ##############
 
 Plugin 'sjl/badwolf'
+
+" https://github.com/scrooloose/nerdtree
+Plugin 'scrooloose/nerdtree'
+
+" https://draculatheme.com/vim/
+Plugin 'dracula/vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,7 +67,8 @@ filetype plugin indent on    " required
 "# ##############
 " Colors {{{
 syntax enable           " enable syntax processing
-colorscheme badwolf
+" colorscheme badwolf
+colorscheme dracula
 set termguicolors
 " }}}
 
