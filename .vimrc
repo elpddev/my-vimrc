@@ -45,6 +45,11 @@ Plugin 'scrooloose/nerdtree'
 " https://draculatheme.com/vim/
 Plugin 'dracula/vim'
 
+" https://github.com/leafgarland/typescript-vim
+Plugin 'leafgarland/typescript-vim'
+
+" https://github.com/Quramy/tsuquyomi
+Plugin 'quramy/tsuquyomi'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,13 +81,16 @@ set termguicolors
 
 " number of visual spaces per TAB. On existing documents with tabs, how to
 " show them visually. 
-set tabstop=4            
+set tabstop=2            
 
 " number of spaces in tab when editing
-set softtabstop=4        
+set softtabstop=2        
 
 " convert tabs to spaces when pressing tab.
 set expandtab
+
+" Number of spaces to use for each step of (auto)indent.
+set shiftwidth=2
 
 """"""""""""""""""
 
@@ -109,9 +117,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 map <Space>n :NERDTreeToggle<CR>
 
-" ****************
+" *****************
+" Key Map
+" *****************
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" ******************************
 " Reference
-" ****************
+" ******************************
 
 " http://vimdoc.sourceforge.net/htmldoc/autocmd.html
 
@@ -123,6 +140,8 @@ map <Space>n :NERDTreeToggle<CR>
 
 " winnr([{arg}])	
 " The result is a Number, which is the number of the current window.  The top window has number 1.  When the optional argument is "$", the number of the last window is returned (the window count). > let window_count = winnr('$')
+
+" # nnoremap - normal, none recursive, key mapping
 
 """""""""""""""""""
 " # Functions
