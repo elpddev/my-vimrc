@@ -126,6 +126,16 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"	pastetoggle - When non-empty, specifies the key sequence that toggles the 'paste'
+"	option.  This is like specifying a mapping: >
+"
+" paste - Put Vim in Paste mode.  This is useful if you want to cut or copy
+"	some text from one window and paste it in Vim.  This will avoid
+"	unexpected effects.
+"
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+set pastetoggle=<F2>
+
 " ******************************
 " Reference
 " ******************************
