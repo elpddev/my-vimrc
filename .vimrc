@@ -51,6 +51,9 @@ Plugin 'leafgarland/typescript-vim'
 " https://github.com/Quramy/tsuquyomi
 Plugin 'quramy/tsuquyomi'
 
+" https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64
+Plugin 'valloric/youcompleteme'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -135,6 +138,17 @@ nnoremap <C-H> <C-W><C-H>
 "
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 set pastetoggle=<F2>
+
+" ****************
+" You Complete Me Plugin
+" """"""""""""""""
+"
+" For debugging
+" let g:ycm_server_keep_logfiles = 1
+" let g:ycm_server_log_level = 'debug'
+"
+" https://github.com/Valloric/YouCompleteMe#full-installation-guide
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " ******************************
 " Reference
