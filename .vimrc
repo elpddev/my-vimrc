@@ -54,6 +54,9 @@ Plugin 'quramy/tsuquyomi'
 " https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64
 Plugin 'valloric/youcompleteme'
 
+" https://github.com/junegunn/fzf.vim
+Plugin 'junegunn/fzf'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -128,6 +131,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Open fuzzy finder
+nnoremap <Space>f :FZF<CR>
 
 "	pastetoggle - When non-empty, specifies the key sequence that toggles the 'paste'
 "	option.  This is like specifying a mapping: >
