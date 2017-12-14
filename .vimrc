@@ -123,6 +123,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 map <Space>n :NERDTreeToggle<CR>
 
+" Auto-close nerdtree when opening a file in new tab
+" https://stackoverflow.com/questions/28632620/auto-close-nerdtree-when-opening-file-in-new-tab
+let NERDTreeQuitOnOpen=1
+
 " *****************
 " Key Map
 " *****************
