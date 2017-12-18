@@ -57,6 +57,12 @@ Plugin 'valloric/youcompleteme'
 " https://github.com/junegunn/fzf.vim
 Plugin 'junegunn/fzf'
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -126,6 +132,18 @@ map <Space>n :NERDTreeToggle<CR>
 " Auto-close nerdtree when opening a file in new tab
 " https://stackoverflow.com/questions/28632620/auto-close-nerdtree-when-opening-file-in-new-tab
 let NERDTreeQuitOnOpen=1
+
+""""""""""""""""""
+" UltiSnips
+""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<Space>s"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " *****************
 " Key Map
