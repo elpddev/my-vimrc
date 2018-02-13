@@ -63,6 +63,16 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
+" https://github.com/posva/vim-vue
+Plugin 'posva/vim-vue'
+
+" https://github.com/digitaltoad/vim-pug
+Plugin 'digitaltoad/vim-pug'
+
+" https://vimawesome.com/plugin/ack-vim
+Plugin 'mileszs/ack.vim'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -138,12 +148,15 @@ let NERDTreeQuitOnOpen=1
 """"""""""""""""""
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<Space>s"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<C-w>"
+let g:UltiSnipsJumpForwardTrigger="<C-w>"
+let g:UltiSnipsJumpBackwardTrigger="<C-e>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" https://github.com/SirVer/ultisnips/issues/711
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " *****************
 " Key Map
@@ -177,6 +190,12 @@ set pastetoggle=<F2>
 "
 " https://github.com/Valloric/YouCompleteMe#full-installation-guide
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+
+" ****************
+" The Silver Searcher Plugin
+" """"""""""""""""
+" https://github.com/ggreer/the_silver_searcher
+let g:ackprg = 'ag --vimgrep'
 
 " ******************************
 " Reference
