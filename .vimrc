@@ -72,6 +72,9 @@ Plugin 'digitaltoad/vim-pug'
 " https://vimawesome.com/plugin/ack-vim
 Plugin 'mileszs/ack.vim'
 
+" https://github.com/maksimr/vim-jsbeautify
+Plugin 'maksimr/vim-jsbeautify'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -179,6 +182,11 @@ nnoremap <Space>f :FZF<CR>
 "
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 set pastetoggle=<F2>
+
+""""""""""""""""""
+" vim jsbeautify
+""""""""""""""""""
+map <c-f> :call JsBeautify()<cr>
 
 " ****************
 " You Complete Me Plugin
