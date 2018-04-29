@@ -75,6 +75,9 @@ Plugin 'mileszs/ack.vim'
 " https://github.com/maksimr/vim-jsbeautify
 Plugin 'maksimr/vim-jsbeautify'
 
+" https://github.com/vim-syntastic/syntastic
+Plugin 'scrooloose/syntastic'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -203,7 +206,32 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 " The Silver Searcher Plugin
 " """"""""""""""""
 " https://github.com/ggreer/the_silver_searcher
-let g:ackprg = 'ag --vimgrep'
+" let g:ackprg = 'ag --vimgrep'
+" https://github.com/mileszs/ack.vim/issues/38
+
+" ****************
+" Ack.vim plugin
+" ****************
+let g:ackprg="ack -H --nocolor --nogroup --column"
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
+" ****************
+" syntastic
+" ****************
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ****************
+" General
+" ****************
+set dir=~/tmp/vim-swap
 
 " ******************************
 " Reference
