@@ -52,7 +52,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'quramy/tsuquyomi'
 
 " https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64
-Plugin 'valloric/youcompleteme'
+Plugin 'valloric/YouCompleteMe'
 
 " https://github.com/junegunn/fzf.vim
 Plugin 'junegunn/fzf'
@@ -200,7 +200,7 @@ map <c-f> :call JsBeautify()<cr>
 " let g:ycm_server_log_level = 'debug'
 "
 " https://github.com/Valloric/YouCompleteMe#full-installation-guide
-let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_server_python_interpreter = '/usr/bin/python3.6'
 
 " ****************
 " The Silver Searcher Plugin
